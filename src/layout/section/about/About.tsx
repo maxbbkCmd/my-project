@@ -33,22 +33,7 @@ export const About = () => {
           <CopyContainer>
             <AboutTitle>ABOUT ME</AboutTitle>
             <AboutCopy>
-              Hello again everyone! So, you already know that my name is Gleb. A
-              little about myself: student, 18 y.o., athlete-football player, I
-              love creativity since childhood, I live in Donetsk, Ukraine. Why
-              programming? Everything is elementary - I like it, the profession
-              of the future, thanks to which I can provide myself and fulfill my
-              dream - travel, at the moment I specialize in web design,
-              front-end and back-end development, turnkey websites. Why should
-              you choose me? I approach each order with great responsibility and
-              love, as I want to make a name for myself, exclude plagiarism and
-              negligence, fully study the project, the client and its target
-              audience, work for quality, trying to make an order as quickly and
-              uniquely as possible, taking into account all the edits and
-              wishes. By trusting me, you will get the maximum return for your
-              project, save your nerves and time. If you are interested in me ,
-              you want to know something more or use my services, then I will
-              provide all my contacts below.
+            Hello everyone! My name is Max Mityukov, and I am a programmer from the Moscow region. A little about me: I am currently studying web development, specializing in HTML, CSS, JavaScript, React, and Node.js. I have a deep passion for technology and enjoy turning ideas into functional and aesthetically pleasing projects. Why did I choose programming? It’s simple — I see it as a profession of the future, a way to express creativity, and a tool to solve real-world problems while building my career. My goal is to become a highly skilled full-stack developer capable of handling all stages of web development. Why should you work with me? I treat every project with precision and dedication, ensuring no detail is overlooked. I strive to deliver high-quality, efficient, and unique solutions that align with the client’s vision and target audience. I believe in clear communication, attention to detail, and timely execution to exceed expectations. If you’re interested in working with me, learning more about what I do, or using my services, feel free to reach out using the contact information below.
             </AboutCopy>
           </CopyContainer>
           <ThirdImg src={myFoto3} alt='2' />

@@ -4,6 +4,8 @@ import { Logo } from "../../components/logo/Logo";
 import { Container } from "../../components/Container";
 import { theme } from "../../styles/Theme";
 import { FlexWrapper } from "../../components/FlexWrapper";
+import { Link } from "../../components/Link";
+import { LinkTitle } from "../../components/LinkTitle";
 
 export const Footer = () => {
   return (
@@ -11,35 +13,22 @@ export const Footer = () => {
       <Container padding={"50px 15px 50px 15px"}>
         <FlexWrapper justify='space-evenly'>
           <FooterLink>
-            <li>
-              <Link href='#home'>Home</Link>
-            </li>
-            <li>
-              <Link href='#home'>About me</Link>
-            </li>
-            <li>
-              <Link href='#home'>Portfolio</Link>
-            </li>
-            <li>
-              <Link href='#home'>Contact</Link>
-            </li>
+              <LinkTitle title="Home"></LinkTitle>
+              <Link href={"#about"} children="About me"></Link>
+              <Link href={"#portfolio"} children="Portfolio"></Link>
+              <Link href={"#contact"} children="Contact"></Link>
           </FooterLink>
           <FooterLink>
-            <li>Contact:</li>
-            <li>Email: 89263113112@mail.ru</li>
-            <li>Telegram: @maxMtk</li>
-            <li>Calls: +7 (926) 311-31-12</li>
+              <LinkTitle title="Contact:"></LinkTitle>
+              <Link href={"mailto:89263113112@mail.ru"} children="Email: 89263113112@mail.ru"></Link>
+              <Link href={"https://t.me/maxMtk"} children="Telegram: @maxMtk" target="_blank"></Link>
+              <Link href={"tel:+79263113112"} children="Calls: +7 (926) 311-31-12"></Link>
           </FooterLink>
           <FooterWrapper>
             <LogoWrapper>
               <Logo />
               <ArrowWrapper>
-                <Icon
-                  iconId={"arrowTopIcon"}
-                  width={"36"}
-                  height={"36"}
-                  viewBox={"0 0 36 36"}
-                />
+                <Icon iconId={"arrowTopIcon"} width={"36"} height={"36"} viewBox={"0 0 36 36"}/>
               </ArrowWrapper>
             </LogoWrapper>
             <FooterSmallCopy>Copyright © 2021, Notitanic</FooterSmallCopy>
@@ -62,16 +51,6 @@ const FooterLink = styled.ul`
   font-size: 18px;
   text-align: left;
   gap: 18px;
-`;
-
-const Link = styled.a`
-  display: flex;
-  flex-direction: column;
-  font-weight: 200;
-  font-size: 18px;
-  text-align: left;
-  gap: 18px;
-  color: ${theme.colors.font};
 `;
 
 const FooterWrapper = styled.div`

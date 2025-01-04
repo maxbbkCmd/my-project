@@ -1,22 +1,14 @@
 import styled from "styled-components";
-import { theme } from "../../styles/Theme";
+import { Link } from "../Link";
 
 export const Menu = () => {
   return (
     <StyledMenu>
       <ul>
-        <li>
-          <a href='#home'>Home</a>
-        </li>
-        <li>
-          <a href='#about'>About me</a>
-        </li>
-        <li>
-          <a href='#portfolio'>Portfolio</a>
-        </li>
-        <li>
-          <a href='#footer'>Contact</a>
-        </li>
+        <Link href='#home'>Home</Link>
+        <Link href='#about'>About me</Link>
+        <Link href='#portfolio'>Portfolio</Link>
+        <Link href='#footer'>Contact</Link>
       </ul>
     </StyledMenu>
   );
@@ -28,10 +20,5 @@ const StyledMenu = styled.nav`
   ul {
     display: flex;
     gap: 145px;
-  }
-  a {
-    color: ${theme.colors.font};
-    font-weight: 200;
-    font-size: 18px;
   }
 `;
