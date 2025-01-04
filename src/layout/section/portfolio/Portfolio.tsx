@@ -6,7 +6,7 @@ import { theme } from "../../../styles/Theme";
 
 export const Portfolio = () => {
   return (
-    <StyledWrapper>
+    <StyledWrapper id="portfolio">
       <Container>
         <PortfolioTitle>PORTFOLIO</PortfolioTitle>
         <PortfolioWrapper>

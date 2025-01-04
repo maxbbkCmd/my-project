@@ -7,7 +7,7 @@ import { theme } from "../../../styles/Theme";
 
 export const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id="home">
       <Container>
         <FlexWrapper align={"center"} justify={"space-around"} gap='123px'>
           <MainTextContainer>
@@ -35,6 +35,8 @@ export const Main = () => {
 
 const StyledMain = styled.main`
   display: flex;
+  margin-top: 104px;
+  z-index: 999;
 `;
 
 const MainTextContainer = styled.div`
@@ -97,7 +99,7 @@ const Elips = styled.div`
       height: 575px;
       position: absolute;
       border: 63px solid ${theme.colors.accent};
-      box-shadow: 0 0 152px 0 rgba(0, 196, 240, 0.42);
+      box-shadow: 0 0 50px 0 rgba(0, 196, 240, 0.42);
       border-radius: 50%;
       object-fit: contain;
       top: 0;

@@ -6,16 +6,16 @@ export const Menu = () => {
     <StyledMenu>
       <ul>
         <li>
-          <a href='/#'>Home</a>
+          <a href='#home'>Home</a>
         </li>
         <li>
-          <a href='/#'>About me</a>
+          <a href='#about'>About me</a>
         </li>
         <li>
-          <a href='/#'>Portfolio</a>
+          <a href='#portfolio'>Portfolio</a>
         </li>
         <li>
-          <a href='/#'>Contact</a>
+          <a href='#footer'>Contact</a>
         </li>
       </ul>
     </StyledMenu>

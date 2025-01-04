@@ -9,7 +9,7 @@ import { Images } from "../../../components/Image";
 
 export const About = () => {
   return (
-    <StyledWrapper>
+    <StyledWrapper id="about">
       <Container position={"relative"} marginBottom={"119px"}>
         <DivWrapper></DivWrapper>
         <AboutWrapper>

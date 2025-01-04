@@ -7,21 +7,29 @@ import { FlexWrapper } from "../../components/FlexWrapper";
 
 export const Footer = () => {
   return (
-    <StyledFooter>
-      <Container>
-        <FlexWrapper justify='space-evenly' margin='50px 0 50px 0'>
-          <ul>
-            <li>Home</li>
-            <li>About me</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
-          </ul>
-          <ul>
+    <StyledFooter id='footer'>
+      <Container padding={"50px 15px 50px 15px"}>
+        <FlexWrapper justify='space-evenly'>
+          <FooterLink>
+            <li>
+              <Link href='#home'>Home</Link>
+            </li>
+            <li>
+              <Link href='#home'>About me</Link>
+            </li>
+            <li>
+              <Link href='#home'>Portfolio</Link>
+            </li>
+            <li>
+              <Link href='#home'>Contact</Link>
+            </li>
+          </FooterLink>
+          <FooterLink>
             <li>Contact:</li>
-            <li>Email: wwww@mail.ru</li>
-            <li>Inst: @maxMtk</li>
+            <li>Email: 89263113112@mail.ru</li>
+            <li>Telegram: @maxMtk</li>
             <li>Calls: +7 (926) 311-31-12</li>
-          </ul>
+          </FooterLink>
           <FooterWrapper>
             <LogoWrapper>
               <Logo />
@@ -44,21 +52,33 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   background-color: ${theme.colors.secondaryBg};
+  padding: 50px 0 50px;
+`;
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    font-weight: 200;
-    font-size: 18px;
-    text-align: left;
-    gap: 18px;
-  }
+const FooterLink = styled.ul`
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+  font-size: 18px;
+  text-align: left;
+  gap: 18px;
+`;
+
+const Link = styled.a`
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+  font-size: 18px;
+  text-align: left;
+  gap: 18px;
+  color: ${theme.colors.font};
 `;
 
 const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 57px;
+  align-items: start;
 `;
 
 const FooterSmallCopy = styled.small`
