@@ -13,7 +13,7 @@ export const Footer = () => {
       <Container padding={"50px 15px 50px 15px"}>
         <FlexWrapper justify='space-evenly'>
           <FooterLink>
-              <LinkTitle title="Home"></LinkTitle>
+              <Link href={"#home"} children="Home"></Link>
               <Link href={"#about"} children="About me"></Link>
               <Link href={"#portfolio"} children="Portfolio"></Link>
               <Link href={"#contact"} children="Contact"></Link>

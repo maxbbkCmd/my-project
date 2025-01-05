@@ -2,7 +2,7 @@ type ImageProps = {
   src: string;
   alt: string;
   border?: string;
-  borderRadius: string;
+  borderRadius?: string;
   width?: string;
 };
 

@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper gap={"219px"} align={"center"}>
+        <FlexWrapper justify={"space-between"}>
           <Logo />
           <Menu />
         </FlexWrapper>
@@ -19,12 +19,12 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
   padding: 26px 0;
   background-color: ${theme.colors.primaryBg};
-  z-index: 10;  
+  z-index: 10;
 `;

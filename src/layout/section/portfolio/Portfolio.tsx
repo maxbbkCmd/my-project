@@ -6,7 +6,7 @@ import { theme } from "../../../styles/Theme";
 
 export const Portfolio = () => {
   return (
-    <StyledWrapper id="portfolio">
+    <StyledWrapper id='portfolio'>
       <Container>
         <PortfolioTitle>PORTFOLIO</PortfolioTitle>
         <PortfolioWrapper>
@@ -18,8 +18,11 @@ export const Portfolio = () => {
               viewBox={"0 0 36 36"}
             />
           </SliderButton>
+
           <PortfolioSliderWrapper>
-            <SliderImages src={landingImage} alt='' />
+            <SliderImageWrapper>
+              <SliderImages src={landingImage} alt='' />
+            </SliderImageWrapper>
 
             <SliderTextContainer>
               <SliderTitel>Landing Ice-cream</SliderTitel>
@@ -71,11 +74,14 @@ const PortfolioWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const SliderButton = styled.div`
   width: 60px;
   height: 60px;
+  min-width: 60px;
+  min-width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,39 +100,45 @@ const StyledWrapper = styled.section`
 const PortfolioSliderWrapper = styled.div`
   display: flex;
   border-radius: 29px;
-  margin: 0 auto;
   background-color: ${theme.colors.secondaryBg};
   width: max-content;
-  margin: 0px 40px 0px 40px;
+  padding: 50px;
+  max-width: 970px;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 `;
 
-const SliderImages = styled.img`
-  margin: 50px 0 50px 50px;
-  max-height: 500px;
+const SliderImageWrapper = styled.div``;
 
-  img {
-    object-fit: cover;
-  }
+const SliderImages = styled.img`
+  max-height: 500px;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  object-fit: cover;
 `;
 
 const SliderTextContainer = styled.div`
-  margin: 50px 50px 0px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
+  min-width: 250px;
+  width: 50%;
+  max-width: 295px;
+  gap: 25px;
+  min-height: 500px;
+  justify-content: space-evenly;
 `;
 
 const SliderTitel = styled.h3`
-  font-weight: 400;
+  font-weight: 300;
   font-size: 24px;
-  margin-bottom: 25px;
 `;
 
 const SliderCopy = styled.p`
   font-weight: 200;
   font-size: 18px;
-  margin-bottom: 25px;
 `;
 
 const SliderLink = styled.a`

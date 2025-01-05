@@ -16,9 +16,14 @@ export const Menu = () => {
 
 const StyledMenu = styled.nav`
   display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 710px;
 
   ul {
     display: flex;
-    gap: 145px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
   }
 `;

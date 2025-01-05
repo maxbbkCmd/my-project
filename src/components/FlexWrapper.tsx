@@ -16,6 +16,7 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   align-items: ${(props) => props.align || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   gap: ${(props) => props.gap || "0px"};
+  //should be removed
   height: 100%;
   margin: ${(props) => props.margin || "0px"};
 `;

@@ -8,3 +8,5 @@ export const theme = {
     elements: '#E2A300'
   }
 }
+
+media: {}

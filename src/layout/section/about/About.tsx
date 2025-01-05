@@ -9,9 +9,8 @@ import { Images } from "../../../components/Image";
 
 export const About = () => {
   return (
-    <StyledWrapper id="about">
+    <StyledWrapper id='about'>
       <Container position={"relative"} marginBottom={"119px"}>
-        <DivWrapper></DivWrapper>
         <AboutWrapper>
           <ImagesContainer>
             <Images
@@ -33,7 +32,24 @@ export const About = () => {
           <CopyContainer>
             <AboutTitle>ABOUT ME</AboutTitle>
             <AboutCopy>
-            Hello everyone! My name is Max Mityukov, and I am a programmer from the Moscow region. A little about me: I am currently studying web development, specializing in HTML, CSS, JavaScript, React, and Node.js. I have a deep passion for technology and enjoy turning ideas into functional and aesthetically pleasing projects. Why did I choose programming? It’s simple — I see it as a profession of the future, a way to express creativity, and a tool to solve real-world problems while building my career. My goal is to become a highly skilled full-stack developer capable of handling all stages of web development. Why should you work with me? I treat every project with precision and dedication, ensuring no detail is overlooked. I strive to deliver high-quality, efficient, and unique solutions that align with the client’s vision and target audience. I believe in clear communication, attention to detail, and timely execution to exceed expectations. If you’re interested in working with me, learning more about what I do, or using my services, feel free to reach out using the contact information below.
+              Hello everyone! My name is Max Mityukov, and I am a programmer
+              from the Moscow region. A little about me: I am currently studying
+              web development, specializing in HTML, CSS, JavaScript, React, and
+              Node.js. I have a deep passion for technology and enjoy turning
+              ideas into functional and aesthetically pleasing projects. Why did
+              I choose programming? It’s simple — I see it as a profession of
+              the future, a way to express creativity, and a tool to solve
+              real-world problems while building my career. My goal is to become
+              a highly skilled full-stack developer capable of handling all
+              stages of web development. Why should you work with me? I treat
+              every project with precision and dedication, ensuring no detail is
+              overlooked. I strive to deliver high-quality, efficient, and
+              unique solutions that align with the client’s vision and target
+              audience. I believe in clear communication, attention to detail,
+              and timely execution to exceed expectations. If you’re interested
+              in working with me, learning more about what I do, or using my
+              services, feel free to reach out using the contact information
+              below.
             </AboutCopy>
           </CopyContainer>
           <ThirdImg src={myFoto3} alt='2' />
@@ -43,30 +59,25 @@ export const About = () => {
   );
 };
 
-const DivWrapper = styled.div`
-  background-image: url(${ellips});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 1300px;
-  position: absolute;
-  height: 1101px;
-  width: 1364px;
-  top: -48px;
-  left: -150px;
-`;
-
 const StyledWrapper = styled.section`
   display: flex;
 `;
 
 const AboutWrapper = styled.div`
   position: relative;
+  background-image: url(${ellips});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 961px;
+  top: 0px;
+  left: 0px;
+
 `;
 
 const ImagesContainer = styled.div`
@@ -85,6 +96,7 @@ const CopyContainer = styled.div`
   position: absolute;
   background-color: ${theme.colors.primaryBg};
   border-radius: 14px;
+  z-index: 999;
 `;
 
 const AboutTitle = styled.h2`

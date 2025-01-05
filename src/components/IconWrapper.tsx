@@ -28,8 +28,8 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 270px;
-  height: 270px;
+  min-width: 270px;
+  min-height: 270px;
   background-color: #2a2a2a;
   border-radius: 29px;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.47);

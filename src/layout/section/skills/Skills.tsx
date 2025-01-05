@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { IconWrapper } from "../../../components/IconWrapper";
-import { theme } from "../../../styles/Theme";
 
 export const Skills = () => {
   return (
