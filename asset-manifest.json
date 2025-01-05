@@ -1,21 +1,20 @@
 {
   "files": {
     "main.css": "/my-project/static/css/main.dc4d6ff2.css",
-    "main.js": "/my-project/static/js/main.7d6f2e5d.js",
+    "main.js": "/my-project/static/js/main.9e69ea58.js",
+    "static/media/Gleb.png": "/my-project/static/media/Gleb.598de7ff014dc8ab7fe7.png",
     "static/media/Ellips.png": "/my-project/static/media/Ellips.5b588115aca55a4728ac.png",
     "static/media/2.png": "/my-project/static/media/2.e851f230c4e5ffcb7ccb.png",
     "static/media/MaskGroup.png": "/my-project/static/media/MaskGroup.4fe196bca99200cff6a3.png",
-    "static/media/Man.png": "/my-project/static/media/Man.be5fb5dd8ae9711f5ca5.png",
     "static/media/1.png": "/my-project/static/media/1.54302ee8dbd78ca9125b.png",
     "static/media/3.png": "/my-project/static/media/3.8c32f7583068cdd706ba.png",
-    "static/media/Man-icon.png": "/my-project/static/media/Man-icon.2c54465703e2794803d4.png",
     "static/media/Sprite.svg": "/my-project/static/media/Sprite.56adcec70056b75626c2d5e5062d30ba.svg",
     "index.html": "/my-project/index.html",
     "main.dc4d6ff2.css.map": "/my-project/static/css/main.dc4d6ff2.css.map",
-    "main.7d6f2e5d.js.map": "/my-project/static/js/main.7d6f2e5d.js.map"
+    "main.9e69ea58.js.map": "/my-project/static/js/main.9e69ea58.js.map"
   },
   "entrypoints": [
     "static/css/main.dc4d6ff2.css",
-    "static/js/main.7d6f2e5d.js"
+    "static/js/main.9e69ea58.js"
   ]
 }
