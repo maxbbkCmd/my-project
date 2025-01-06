@@ -24,7 +24,8 @@ const StyledMobileMenu = styled.nav`
   display: none;
 
   @media ${theme.media.tablet} {
-    display: block;
+    display: none;
+    // включить попапп
   }
 `;
 

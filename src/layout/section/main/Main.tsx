@@ -4,6 +4,7 @@ import manIcon from "../../../assets/images/Man-icon.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
+import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
@@ -29,11 +30,14 @@ export const Main = () => {
   );
 };
 
+
 const StyledMain = styled.main`
   display: flex;
   margin-top: 104px;
   z-index: 999;
-`;
+  `;
+  
+  StyledMain.displayName = "MainStyledComponent";
 
 const MainTextContainer = styled.div`
   display: flex;
@@ -41,7 +45,10 @@ const MainTextContainer = styled.div`
   gap: 27px;
   max-width: 447px;
   text-align: left;
-  gap: 27px;
+
+  @media ${theme.media.mobile} {
+    gap: 12px;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -50,26 +57,17 @@ const ImageWrapper = styled.div`
 `;
 
 const GreatingSpan = styled.span`
-  font-weight: 400;
-  font-size: 48px;
   position: relative;
   width: min-content;
-
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 15px;
-    background-color: ${theme.colors.accent};
-    position: absolute;
-    bottom: 10px;
-    z-index: -1;
-  }
+  ${font({weight: 400, lineHeight: 1.2, Fmax: 48, Fmin: 27})}
+  letter-spacing: 0.05em;
 `;
 
 const MainTitle = styled.h1`
   font-weight: 700;
   font-size: 72px;
+  ${font({family: 'Poppins, sans-serif', weight: 600, color: theme.colors.font, lineHeight: 1.2, Fmax: 72, Fmin: 52})}
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const AboutText = styled.p`

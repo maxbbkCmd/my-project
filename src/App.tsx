@@ -15,9 +15,9 @@ function App() {
         <Header />
         <Main />
         <Skills />
-        <About />
-        <Portfolio />
-        <Footer />
+        {/* <About /> */}
+        {/* <Portfolio /> */}
+        {/* <Footer /> */}
       </ThemeProvider>
     </div>
   );

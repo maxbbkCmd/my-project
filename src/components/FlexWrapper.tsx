@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../styles/Theme";
 
 type FlexWrapperProps = {
   direction?: string;
@@ -19,4 +20,8 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   //should be removed
   height: 100%;
   margin: ${(props) => props.margin || "0px"};
+
+  @media ${theme.media.mobile} {
+    gap: 25px;
+  }
 `;
