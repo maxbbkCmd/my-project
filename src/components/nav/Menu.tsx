@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "../Link";
+import { theme } from "../../styles/Theme";
 
 export const Menu = () => {
   return (
@@ -25,5 +26,10 @@ const StyledMenu = styled.nav`
     justify-content: space-between;
     width: 100%;
     align-items: center;
+    margin-left: 100px;
+  }
+
+  @media ${theme.media.tablet} {
+    display: none;
   }
 `;

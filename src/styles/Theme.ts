@@ -6,7 +6,11 @@ export const theme = {
 
     font: "#FFFFFF",
     elements: '#E2A300'
+  },
+
+  media: {
+    tablet: 'screen and (max-width: 768px)',
+    mobile: 'screen and (max-width: 576px)'
   }
 }
 
-media: {}

@@ -96,7 +96,7 @@ const CopyContainer = styled.div`
   position: absolute;
   background-color: ${theme.colors.primaryBg};
   border-radius: 14px;
-  z-index: 999;
+  z-index: 99;
 `;
 
 const AboutTitle = styled.h2`
