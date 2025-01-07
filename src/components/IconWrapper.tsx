@@ -16,14 +16,16 @@ export type IconWrapperPropsType = {
 export const IconWrapper = (props: IconWrapperPropsType) => {
   return (
     <StyledWrapper>
-      <Icon
-        iconId={props.iconId}
-        width={props.width}
-        height={props.height}
-        viewBox={props.viewBox}
-        mobileHeight={props.mobileHeight}
-        mobileWidth={props.mobileWidth}
-      />
+      <IconContainer>
+        <Icon
+          iconId={props.iconId}
+          width={props.width}
+          height={props.height}
+          viewBox={props.viewBox}
+          mobileHeight={props.mobileHeight}
+          mobileWidth={props.mobileWidth}
+        />
+      </IconContainer>
 
       <h3>{props.text}</h3>
     </StyledWrapper>
@@ -53,7 +55,7 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const IconWrapper2 = styled.div`
+const IconContainer = styled.div`
   /* width: 100px; */
   height: 96px;
   display: flex;
