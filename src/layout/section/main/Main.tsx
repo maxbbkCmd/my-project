@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import manImg from "../../../assets/images/Gleb.png";
-import manIcon from "../../../assets/images/Man-icon.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
@@ -10,7 +9,7 @@ export const Main = () => {
   return (
     <StyledMain id='home'>
       <Container>
-        <FlexWrapper align={"center"} justify={"space-evenly"} wrap="wrap">
+        <FlexWrapper align={"end"} justify={"space-between"} wrap="nowrap" padding={"114px 0 0 0"}>
           <MainTextContainer>
             <GreatingSpan>HELLO</GreatingSpan>
             <MainTitle>I’m Max Mityukov </MainTitle>
@@ -33,7 +32,7 @@ export const Main = () => {
 
 const StyledMain = styled.main`
   display: flex;
-  margin-top: 104px;
+
   z-index: 999;
   `;
   
@@ -45,6 +44,7 @@ const MainTextContainer = styled.div`
   gap: 27px;
   max-width: 447px;
   text-align: left;
+  margin-bottom: 142px;
 
   @media ${theme.media.mobile} {
     gap: 12px;
@@ -52,7 +52,9 @@ const MainTextContainer = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  position: relative;
+ @media ${theme.media.tablet} {
+  display: none;
+ }
 
 `;
 
@@ -83,27 +85,6 @@ const ContactButton = styled.button`
   font-weight: 700;
   font-size: 18px;
   box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
-`;
-
-const Elips = styled.div`
-  span {
-    &::before {
-      content: "";
-      width: 575px;
-      height: 575px;
-      position: absolute;
-      border: 63px solid ${theme.colors.accent};
-      box-shadow: 0 0 150px 0 rgba(0, 196, 240, 0.42);
-      border-radius: 50%;
-      object-fit: contain;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      z-index: 0;
-    }
-  }
 `;
 
 const Photo = styled.img`

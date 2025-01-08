@@ -26,7 +26,10 @@ const StyledMenu = styled.nav`
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    margin-left: 100px;
+
+    @media screen and (max-width: 950px) {
+      margin-left: 50px;
+    }
   }
 
   @media ${theme.media.tablet} {

@@ -11,6 +11,9 @@ type FlexWrapperProps = {
   footerWrap?: string;
   footerJustify?: string;
   footerGap?: string;
+  maxWidth?: string;
+  height?: string;
+  padding?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -21,8 +24,10 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   gap: ${(props) => props.gap || "0px"};
   //should be removed
-  height: 100%;
+  height: ${(props) => props.height || "100%"};
   margin: ${(props) => props.margin || "0px"};
+  max-width: ${(props) => props.maxWidth || "1200px"};
+  padding: ${(props) => props.padding || "0px"};
 
   @media ${theme.media.mobile} {
     gap: 25px;

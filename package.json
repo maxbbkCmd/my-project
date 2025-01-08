@@ -9,6 +9,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.13",
     "web-vitals": "^4.2.4"
   },
@@ -22,9 +24,9 @@
     ]
   ],
   "scripts": {
- "start": "craco start",
-  "build": "craco build",
-  "test": "craco test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "predeploy": "pnpm run build",
     "deploy": "gh-pages -d build"
@@ -50,6 +52,7 @@
   "devDependencies": {
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
+    "@types/react-slick": "^0.23.13",
     "babel-plugin-styled-components": "^2.1.4",
     "eslint-plugin-react": "^7.37.3",
     "typescript": "^5.7.2"
