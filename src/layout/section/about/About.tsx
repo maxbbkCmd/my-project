@@ -10,7 +10,7 @@ import { Images } from "../../../components/Image";
 export const About = () => {
   return (
     <StyledWrapper id='about'>
-      <Container position={"relative"} marginBottom={"119px"}>
+      <ContainerAbout>
         <AboutWrapper>
           <ImagesContainer>
             <Images
@@ -54,7 +54,7 @@ export const About = () => {
           </CopyContainer>
           <ThirdImg src={myFoto3} alt='2' />
         </AboutWrapper>
-      </Container>
+      </ContainerAbout>
     </StyledWrapper>
   );
 };
@@ -63,13 +63,26 @@ const StyledWrapper = styled.section`
   display: flex;
 `;
 
+const ContainerAbout = styled.div`
+  max-width: 1202px;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 113px 15px 90px;
+  position: relative;
+
+  @media ${theme.media.tablet} {
+    padding: 113px 0px 90px;
+  }
+
+`;
+
 const AboutWrapper = styled.div`
   position: relative;
   background-image: url(${ellips});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,6 +91,12 @@ const AboutWrapper = styled.div`
   top: 0px;
   left: 0px;
 
+  @media screen and (max-width: 1200px) {
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+    flex-wrap: wrap-reverse;
+  }
 `;
 
 const ImagesContainer = styled.div`
@@ -88,15 +107,34 @@ const ImagesContainer = styled.div`
   gap: 275px;
   left: 90px;
   top: 50px;
+
+  @media screen and (max-width: 1200px) {
+    position: static;
+    margin: 0 -20px;
+    gap: 400px;
+  }
+
+  @media ${theme.media.tablet} {
+    > :first-child {
+      display: none;
+    }
+    > :nth-child(2) {
+      margin: -20px 0;
+    }
+  }
 `;
 
 const CopyContainer = styled.div`
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   background-color: ${theme.colors.primaryBg};
   border-radius: 14px;
   z-index: 99;
+
+  /* @media screen and (max-width: 1200px) {
+    position: static;
+  } */
 `;
 
 const AboutTitle = styled.h2`
@@ -105,6 +143,17 @@ const AboutTitle = styled.h2`
   left: 63px;
   font-weight: 400;
   font-size: 48px;
+
+  @media screen and (max-width: 1200px) {
+    left: 25px;
+  }
+
+  @media ${theme.media.mobile} {
+    padding: 0px;
+    position: absolute;
+    top: -30px;
+    left: 25px;
+  }
 `;
 
 const AboutCopy = styled.p`
@@ -116,9 +165,21 @@ const AboutCopy = styled.p`
   letter-spacing: 0.01em;
   font-weight: 200;
   font-size: 20px;
-`;
 
-//**------------------------------------------------ */
+  @media screen and (max-width: 1200px) {
+    margin: 63px 20px 20px 30px;
+  }
+
+  @media ${theme.media.tablet} {
+    max-width: 100%;
+  }
+
+  @media ${theme.media.mobile} {
+    padding: 63px 15px 63px 15px;
+    margin: 0;
+    max-width: 100%;
+  }
+`;
 
 const ThirdImg = styled.img`
   position: absolute;
@@ -127,4 +188,8 @@ const ThirdImg = styled.img`
   right: 0px;
   border: 28px solid ${theme.colors.primaryBg};
   border-radius: 14px;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 `;

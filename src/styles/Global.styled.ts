@@ -36,15 +36,17 @@ button {
 }
 
 section {
-  padding: 113px 0;
 
-  @media ${theme.media.mobile} {
-    padding: 90px 0;
-  }
+
+}
+
+container::nth-of-type(1) {
+  background-color: red;
 }
 
 section:nth-of-type(1),
 section:nth-of-type(2) {
   background-color: ${theme.colors.secondaryBg};
 }
+
 `;

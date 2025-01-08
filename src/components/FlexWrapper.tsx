@@ -8,6 +8,9 @@ type FlexWrapperProps = {
   wrap?: string;
   gap?: string;
   margin?: string;
+  footerWrap?: string;
+  footerJustify?: string;
+  footerGap?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -24,4 +27,20 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   @media ${theme.media.mobile} {
     gap: 25px;
   }
+
+  ${(props) => props.footerWrap && props.footerJustify && props.footerGap && `flex-wrap: wrap;
+  
+  @media ${theme.media.tablet} {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 35px;
+  }
+
+  @media ${theme.media.mobile} {
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  `}
+
+
 `;

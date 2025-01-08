@@ -28,5 +28,5 @@ const StyledHeader = styled.header`
   display: flex;
   padding: 26px 0;
   background-color: ${theme.colors.primaryBg};
-  z-index: 10;
+  z-index: 99999;
 `;

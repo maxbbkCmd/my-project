@@ -10,15 +10,6 @@ export const Portfolio = () => {
       <Container>
         <PortfolioTitle>PORTFOLIO</PortfolioTitle>
         <PortfolioWrapper>
-          <SliderButton>
-            <Icon
-              iconId={"arrowLeftIcon"}
-              width={"36"}
-              height={"36"}
-              viewBox={"0 0 36 36"}
-            />
-          </SliderButton>
-
           <PortfolioSliderWrapper>
             <SliderImageWrapper>
               <SliderImages src={landingImage} alt='' />
@@ -49,15 +40,23 @@ export const Portfolio = () => {
                 </SliderLink>
               </MoreLink>
             </SliderTextContainer>
+            <SliderButtonLeft>
+              <Icon
+                iconId={"arrowLeftIcon"}
+                width={"36"}
+                height={"36"}
+                viewBox={"0 0 36 36"}
+              />
+            </SliderButtonLeft>
+            <SliderButtonRight>
+              <Icon
+                iconId={"arrowRightIcon"}
+                width={"36"}
+                height={"36"}
+                viewBox={"0 0 36 36"}
+              />
+            </SliderButtonRight>
           </PortfolioSliderWrapper>
-          <SliderButton>
-            <Icon
-              iconId={"arrowRightIcon"}
-              width={"36"}
-              height={"36"}
-              viewBox={"0 0 36 36"}
-            />
-          </SliderButton>
         </PortfolioWrapper>
       </Container>
     </StyledWrapper>
@@ -72,12 +71,17 @@ const PortfolioTitle = styled.h2`
 
 const PortfolioWrapper = styled.div`
   display: flex;
+
+  gap: 40px;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
-const SliderButton = styled.div`
+const SliderButtonLeft = styled.div`
+  position: absolute;
+  left: -100px;
+  top: 250px;
   width: 60px;
   height: 60px;
   min-width: 60px;
@@ -87,6 +91,29 @@ const SliderButton = styled.div`
   align-items: center;
   background-color: ${theme.colors.elements};
   border-radius: 50%;
+
+  @media ${theme.media.tablet} {
+  }
+`;
+
+const SliderButtonRight = styled.div`
+  position: absolute;
+  right: -100px;
+  top: 250px;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${theme.colors.elements};
+  border-radius: 50%;
+
+  @media ${theme.media.tablet} {
+    right: 160px;
+    top: 967px;
+  }
 `;
 
 const StyledWrapper = styled.section`
@@ -98,15 +125,25 @@ const StyledWrapper = styled.section`
 `;
 
 const PortfolioSliderWrapper = styled.div`
+  position: relative;
   display: flex;
   border-radius: 29px;
   background-color: ${theme.colors.secondaryBg};
-  width: max-content;
   padding: 50px;
   max-width: 970px;
   width: 100%;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  gap: 81px;
+
+  @media ${theme.media.tablet} {
+    gap: 57px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    gap: 57px;
+    max-width: 550px;
+    padding: 30px 25px;
+  }
 `;
 
 const SliderImageWrapper = styled.div``;
@@ -117,6 +154,7 @@ const SliderImages = styled.img`
   object-fit: contain;
   display: block;
   object-fit: cover;
+  border-radius: 30px;
 `;
 
 const SliderTextContainer = styled.div`
@@ -129,6 +167,17 @@ const SliderTextContainer = styled.div`
   gap: 25px;
   min-height: 500px;
   justify-content: space-evenly;
+
+  @media ${theme.media.tablet} {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 1200px) {
+    max-width: 493px;
+    width: 100%;
+    justify-content: start;
+    min-height: 100%;
+  }
 `;
 
 const SliderTitel = styled.h3`

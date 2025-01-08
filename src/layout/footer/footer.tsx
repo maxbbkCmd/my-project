@@ -11,7 +11,7 @@ export const Footer = () => {
   return (
     <StyledFooter id='footer'>
       <Container padding={"50px 15px 50px 15px"}>
-        <FlexWrapper justify='space-evenly'>
+        <FlexWrapper justify='space-evenly' footerWrap={ "wrap" } footerJustify={"space-between"} footerGap={ '50'}>
           <FooterLink>
               <Link href={"#home"} children="Home"></Link>
               <Link href={"#about"} children="About me"></Link>
@@ -41,7 +41,6 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
   background-color: ${theme.colors.secondaryBg};
-  padding: 50px 0 50px;
 `;
 
 const FooterLink = styled.ul`
@@ -69,6 +68,16 @@ const LogoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 32px;
+
+  @media ${theme.media.mobile} {
+    gap: 105px;
+  }
+
+  @media screen and (max-width: 365px) {
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const ArrowWrapper = styled.div`
