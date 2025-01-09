@@ -11,13 +11,16 @@ export const Footer = () => {
   return (
     <StyledFooter id='footer'>
       <Container padding={"50px 15px 50px 15px"}>
-        <FlexWrapper justify='space-evenly' footerWrap={ "wrap" } footerJustify={"space-between"} footerGap={ '50'}>
+        <FlexWrapper justify='space-evenly' footerWrap={"wrap"} footerJustify={"space-between"} footerGap={'50'}>
+          <Navigation>
+
           <FooterLink>
               <Link href={"#home"} children="Home"></Link>
               <Link href={"#about"} children="About me"></Link>
               <Link href={"#portfolio"} children="Portfolio"></Link>
               <Link href={"#contact"} children="Contact"></Link>
           </FooterLink>
+          </Navigation>
           <FooterLink>
               <LinkTitle title="Contact:"></LinkTitle>
               <Link href={"mailto:89263113112@mail.ru"} children="Email: 89263113112@mail.ru"></Link>
@@ -42,6 +45,8 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   background-color: ${theme.colors.secondaryBg};
 `;
+
+const Navigation = styled.nav``;
 
 const FooterLink = styled.ul`
   display: flex;

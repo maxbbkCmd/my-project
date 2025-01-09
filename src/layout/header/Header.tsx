@@ -10,7 +10,7 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper justify={"space-between"} maxWidth={"1100px"}>
+        <FlexWrapper justify={"space-between"} maxWidth={"1100px"} headerJustify={ "start"}>
           <Logo />
           <Menu />
           <MobileMenu />

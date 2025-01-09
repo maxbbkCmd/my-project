@@ -28,7 +28,7 @@ export const Portfolio = () => {
                 bibendum magna. Nullam hendrerit cursus purus, sit amet viverra
                 arcu gravida vel.
               </SliderCopy>
-              <MoreLink>
+              <LinkWrapper>
                 <SliderLink href='#q'>
                   More
                   <Icon
@@ -38,9 +38,9 @@ export const Portfolio = () => {
                     viewBox={"0 0 14 10"}
                   />
                 </SliderLink>
-              </MoreLink>
+              </LinkWrapper>
             </SliderTextContainer>
-            <SliderButtonLeft>
+            <SliderButtonLeft aria-label="Previous">
               <Icon
                 iconId={"arrowLeftIcon"}
                 width={"36"}
@@ -48,7 +48,7 @@ export const Portfolio = () => {
                 viewBox={"0 0 36 36"}
               />
             </SliderButtonLeft>
-            <SliderButtonRight>
+            <SliderButtonRight aria-label="Next">
               <Icon
                 iconId={"arrowRightIcon"}
                 width={"36"}
@@ -196,7 +196,7 @@ const SliderLink = styled.a`
   color: ${theme.colors.elements};
 `;
 
-const MoreLink = styled.div`
+const LinkWrapper = styled.div`
   display: flex;
   align-items: center;
 

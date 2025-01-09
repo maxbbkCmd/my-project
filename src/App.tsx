@@ -7,7 +7,6 @@ import { Portfolio } from "./layout/section/portfolio/Portfolio";
 import { Footer } from "./layout/footer/footer";
 import { theme } from "./styles/Theme";
 import { ThemeProvider } from "styled-components";
-import { SimpleSlider } from "./components/Slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 

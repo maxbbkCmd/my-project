@@ -9,10 +9,10 @@ export const Main = () => {
   return (
     <StyledMain id='home'>
       <Container>
-        <FlexWrapper align={"end"} justify={"space-between"} wrap="nowrap" padding={"114px 0 0 0"}>
+        <FlexWrapper align={"end"} justify={"space-between"} wrap="nowrap" padding={"114px 0 0 0"} height={ "100vh"}>
           <MainTextContainer>
             <GreatingSpan>HELLO</GreatingSpan>
-            <MainTitle>I’m Max Mityukov </MainTitle>
+            <MainTitle>I’M GLEB KOSTRUBOV</MainTitle>
             <AboutText>
               I've been doing web design, front-end and back-end development for
               a year now. Do you need a website design, site layout, or maybe a
@@ -32,22 +32,20 @@ export const Main = () => {
 
 const StyledMain = styled.main`
   display: flex;
-
   z-index: 999;
   `;
-  
-  StyledMain.displayName = "MainStyledComponent";
 
 const MainTextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 27px;
+  gap: 10px;
   max-width: 447px;
   text-align: left;
-  margin-bottom: 142px;
+  margin-bottom: 124px;
 
   @media ${theme.media.mobile} {
     gap: 12px;
+    margin-bottom: 0;
   }
 `;
 
@@ -56,6 +54,9 @@ const ImageWrapper = styled.div`
   display: none;
  }
 
+ @media ${theme.media.mobile} {
+  display: block;
+ }
 `;
 
 const GreatingSpan = styled.span`

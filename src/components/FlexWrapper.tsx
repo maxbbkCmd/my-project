@@ -8,12 +8,13 @@ type FlexWrapperProps = {
   wrap?: string;
   gap?: string;
   margin?: string;
-  footerWrap?: string;
-  footerJustify?: string;
-  footerGap?: string;
   maxWidth?: string;
   height?: string;
   padding?: string;
+  headerJustify?: string;
+  footerWrap?: string;
+  footerJustify?: string;
+  footerGap?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -23,22 +24,32 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   align-items: ${(props) => props.align || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   gap: ${(props) => props.gap || "0px"};
-  //should be removed
-  height: ${(props) => props.height || "100%"};
   margin: ${(props) => props.margin || "0px"};
   max-width: ${(props) => props.maxWidth || "1200px"};
+  height: ${(props) => props.height || "100%"};
   padding: ${(props) => props.padding || "0px"};
+
+  @media ${theme.media.tablet} {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 35px;
+    height: 100%;
+  }
 
   @media ${theme.media.mobile} {
     gap: 25px;
   }
 
-  ${(props) => props.footerWrap && props.footerJustify && props.footerGap && `flex-wrap: wrap;
-  
-  @media ${theme.media.tablet} {
+  ${(props) =>
+    props.footerWrap &&
+    props.footerJustify &&
+    props.footerGap &&
+    `flex-wrap: wrap;
+    @media ${theme.media.tablet} {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 35px;
+    height: 100%;
   }
 
   @media ${theme.media.mobile} {
@@ -47,5 +58,13 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
   }
   `}
 
+  ${(props) => props.headerJustify &&`
+    @media ${theme.media.tablet} {
+      justify-content: space-between;
+    }
 
+    @media ${theme.media.mobile} {
+      justify-content: flex-start;
+    }
+  `}  
 `;
