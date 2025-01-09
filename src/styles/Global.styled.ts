@@ -20,6 +20,7 @@ body {
   background-color: ${theme.colors.primaryBg};
   color: ${theme.colors.font};
   line-height: 1.2;
+  min-width: 375px;
 }
 
 a {

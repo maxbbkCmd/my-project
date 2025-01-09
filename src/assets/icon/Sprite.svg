@@ -139,6 +139,10 @@
     <path d="M0 5H13M13 5L10.0286 9M13 5L10.0286 1" stroke="#E2A100"/>
   </symbol>
 
+  <symbol id="mainElipse">
+    <circle cx="287.5" cy="287.972" r="254" stroke="#00C4F0" stroke-width="67"/>
+  </symbol>
+
 
 
 </svg>
