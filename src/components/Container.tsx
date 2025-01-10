@@ -9,7 +9,7 @@ type ContainerProps = {
   border?: string;
   position?: string;
   marginBottom?: string;
-
+  mobilePadding?: string;
 };
 
 export const Container = styled.div<ContainerProps>`
@@ -17,8 +17,7 @@ export const Container = styled.div<ContainerProps>`
   width: 100%;
   min-height: 100%;
   margin: 0 auto;
-  padding: ${props => props.padding || '0 15px'};
+  padding: ${(props) => props.padding || '0 15px'};
   position: ${(props) => props.position};
   margin-bottom: ${(props) => props.marginBottom};
 `;
-

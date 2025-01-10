@@ -6,18 +6,16 @@ import { theme } from "../../../styles/Theme";
 
 export const Portfolio = () => {
   return (
-    <StyledWrapper id='portfolio'>
+    <SectionContainer id='portfolio'>
       <Container>
         <PortfolioTitle>PORTFOLIO</PortfolioTitle>
         <PortfolioWrapper>
           <PortfolioSliderWrapper>
-            <SliderImageWrapper>
-              <SliderImages src={landingImage} alt='' />
-            </SliderImageWrapper>
+            <Image src={landingImage} alt='' />
 
-            <SliderTextContainer>
-              <SliderTitel>Landing Ice-cream</SliderTitel>
-              <SliderCopy>
+            <TextWrapper>
+              <Title>Landing Ice-cream</Title>
+              <Description>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                 ut orci eu elit consequat posuere ut sed elit. Nulla et
                 tristique felis. Morbi quis orci non purus blandit fringilla.
@@ -27,9 +25,9 @@ export const Portfolio = () => {
                 condimentum. Cras enim purus, tempor sed massa vel, accumsan
                 bibendum magna. Nullam hendrerit cursus purus, sit amet viverra
                 arcu gravida vel.
-              </SliderCopy>
+              </Description>
               <LinkWrapper>
-                <SliderLink href='#q'>
+                <Link href='#q'>
                   More
                   <Icon
                     iconId={"arrowBottomIcon"}
@@ -37,31 +35,35 @@ export const Portfolio = () => {
                     height={"10"}
                     viewBox={"0 0 14 10"}
                   />
-                </SliderLink>
+                </Link>
               </LinkWrapper>
-            </SliderTextContainer>
-            <SliderButtonLeft aria-label="Previous">
+            </TextWrapper>
+            <PreviousBtn aria-label='Previous'>
               <Icon
                 iconId={"arrowLeftIcon"}
                 width={"36"}
                 height={"36"}
                 viewBox={"0 0 36 36"}
               />
-            </SliderButtonLeft>
-            <SliderButtonRight aria-label="Next">
+            </PreviousBtn>
+            <NextBtn aria-label='Next'>
               <Icon
                 iconId={"arrowRightIcon"}
                 width={"36"}
                 height={"36"}
                 viewBox={"0 0 36 36"}
               />
-            </SliderButtonRight>
+            </NextBtn>
           </PortfolioSliderWrapper>
         </PortfolioWrapper>
       </Container>
-    </StyledWrapper>
+    </SectionContainer>
   );
 };
+
+const SectionContainer = styled.section`
+  padding: 100px 0 150px;
+`;
 
 const PortfolioTitle = styled.h2`
   font-weight: 400;
@@ -71,14 +73,13 @@ const PortfolioTitle = styled.h2`
 
 const PortfolioWrapper = styled.div`
   display: flex;
-
   gap: 40px;
   justify-content: center;
   align-items: center;
   justify-content: center;
 `;
 
-const SliderButtonLeft = styled.div`
+const PreviousBtn = styled.button`
   position: absolute;
   left: -100px;
   top: 250px;
@@ -96,7 +97,7 @@ const SliderButtonLeft = styled.div`
   }
 `;
 
-const SliderButtonRight = styled.div`
+const NextBtn = styled.button`
   position: absolute;
   right: -100px;
   top: 250px;
@@ -116,14 +117,6 @@ const SliderButtonRight = styled.div`
   }
 `;
 
-const StyledWrapper = styled.section`
-  padding: 100px 0 150px;
-
-  button {
-    background-color: ${theme.colors.primaryBg};
-  }
-`;
-
 const PortfolioSliderWrapper = styled.div`
   position: relative;
   display: flex;
@@ -132,7 +125,6 @@ const PortfolioSliderWrapper = styled.div`
   padding: 50px;
   max-width: 970px;
   width: 100%;
-  flex-wrap: wrap;
   gap: 81px;
 
   @media ${theme.media.tablet} {
@@ -143,21 +135,24 @@ const PortfolioSliderWrapper = styled.div`
     gap: 57px;
     max-width: 550px;
     padding: 30px 25px;
+    flex-wrap: wrap;
   }
 `;
 
-const SliderImageWrapper = styled.div``;
-
-const SliderImages = styled.img`
-  max-height: 500px;
-  width: 100%;
+const Image = styled.img`
   object-fit: contain;
   display: block;
   object-fit: cover;
   border-radius: 30px;
+  width:100%;
+  max-width: 493px;
+
+  @media ${theme.media.mobile} {
+    max-width: 294px;
+  }
 `;
 
-const SliderTextContainer = styled.div`
+const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -180,17 +175,17 @@ const SliderTextContainer = styled.div`
   }
 `;
 
-const SliderTitel = styled.h3`
+const Title = styled.h3`
   font-weight: 300;
   font-size: 24px;
 `;
 
-const SliderCopy = styled.p`
+const Description = styled.p`
   font-weight: 200;
   font-size: 18px;
 `;
 
-const SliderLink = styled.a`
+const Link = styled.a`
   font-weight: 200;
   font-size: 18px;
   color: ${theme.colors.elements};

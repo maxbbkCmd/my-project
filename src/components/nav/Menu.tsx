@@ -28,11 +28,11 @@ const StyledMenu = styled.nav`
     align-items: center;
 
     @media screen and (max-width: 950px) {
-      margin-left: 50px;
+      margin-left: 25px;
     }
   }
 
-  @media ${theme.media.tablet} {
+  @media screen and (max-width: 600px) {
     display: none;
   }
 `;

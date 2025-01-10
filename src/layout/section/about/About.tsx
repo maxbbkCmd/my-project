@@ -3,14 +3,15 @@ import myFoto2 from "../../../assets/images/3.png";
 import myFoto3 from "../../../assets/images/2.png";
 import styled from "styled-components";
 import ellips from "../../../assets/images/Ellips.png";
-import { Container } from "../../../components/Container";
+
 import { theme } from "../../../styles/Theme";
 import { Images } from "../../../components/Image";
+import { Container } from "../../../components/Container";
 
 export const About = () => {
   return (
-    <StyledWrapper id='about'>
-      <ContainerAbout>
+    <SectionContainer id='about'>
+      <Container>
         <AboutWrapper>
           <ImagesContainer>
             <Images
@@ -29,9 +30,9 @@ export const About = () => {
             />
           </ImagesContainer>
 
-          <CopyContainer>
-            <AboutTitle>ABOUT ME</AboutTitle>
-            <AboutCopy>
+          <TextWrapper>
+            <Title>ABOUT ME</Title>
+            <Description>
               Hello everyone! My name is Max Mityukov, and I am a programmer
               from the Moscow region. A little about me: I am currently studying
               web development, specializing in HTML, CSS, JavaScript, React, and
@@ -50,31 +51,23 @@ export const About = () => {
               in working with me, learning more about what I do, or using my
               services, feel free to reach out using the contact information
               below.
-            </AboutCopy>
-          </CopyContainer>
+            </Description>
+          </TextWrapper>
           <ThirdImg src={myFoto3} alt='2' />
         </AboutWrapper>
-      </ContainerAbout>
-    </StyledWrapper>
+      </Container>
+    </SectionContainer>
   );
 };
 
-const StyledWrapper = styled.section`
+const SectionContainer = styled.section`
   display: flex;
-`;
+  padding: 0 0 90px;
+  background-color: ${theme.colors.secondaryBg};
 
-const ContainerAbout = styled.div`
-  max-width: 1202px;
-  width: 100%;
-  min-height: 100%;
-  margin: 0 auto;
-  padding: 113px 15px 90px;
-  position: relative;
-
-  @media ${theme.media.tablet} {
-    padding: 113px 0px 90px;
+  ${Container} {
+    padding: 0 0;
   }
-
 `;
 
 const AboutWrapper = styled.div`
@@ -94,8 +87,8 @@ const AboutWrapper = styled.div`
   @media screen and (max-width: 1200px) {
     position: relative;
     flex-direction: row;
-    height: 100%;
     flex-wrap: wrap-reverse;
+    height: 100%;
   }
 `;
 
@@ -124,20 +117,24 @@ const ImagesContainer = styled.div`
   }
 `;
 
-const CopyContainer = styled.div`
+const TextWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
   background-color: ${theme.colors.primaryBg};
   border-radius: 14px;
-  z-index: 99;
+  padding: 63px;
 
-  /* @media screen and (max-width: 1200px) {
-    position: static;
-  } */
+  @media ${theme.media.tablet} {
+    padding: 63px 40px 40px ;
+  }
+
+  @media ${theme.media.mobile} {
+    padding: 63px 15px 15px ;
+  }
 `;
 
-const AboutTitle = styled.h2`
+const Title = styled.h2`
   position: absolute;
   top: -25px;
   left: 63px;
@@ -156,8 +153,7 @@ const AboutTitle = styled.h2`
   }
 `;
 
-const AboutCopy = styled.p`
-  margin: 63px;
+const Description = styled.p`
   font-weight: 300;
   font-size: 19px;
   max-width: 370px;
@@ -166,16 +162,11 @@ const AboutCopy = styled.p`
   font-weight: 200;
   font-size: 20px;
 
-  @media screen and (max-width: 1200px) {
-    margin: 63px 20px 20px 30px;
-  }
-
   @media ${theme.media.tablet} {
     max-width: 100%;
   }
 
   @media ${theme.media.mobile} {
-    padding: 63px 15px 63px 15px;
     margin: 0;
     max-width: 100%;
   }

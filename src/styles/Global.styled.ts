@@ -35,19 +35,4 @@ button {
   background-color: unset;
   border: none;
 }
-
-section {
-
-
-}
-
-container::nth-of-type(1) {
-  background-color: red;
-}
-
-section:nth-of-type(1),
-section:nth-of-type(2) {
-  background-color: ${theme.colors.secondaryBg};
-}
-
 `;

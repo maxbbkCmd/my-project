@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import manImg from "../../../assets/images/man.png";
 import mainIcons from "../../../assets/images/mainIcons.png";
-import newElipse from "../../../assets/images/NewElipse.png";
+import newElipse from "../../../assets/images/NewElipse_shadow.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
@@ -9,23 +9,18 @@ import { font } from "../../../styles/Common";
 
 export const Main = () => {
   return (
-    <StyledMain id='home'>
-      <Container>
-        <FlexWrapper
-          align={"end"}
-          justify={"space-between"}
-          wrap='nowrap'
-          padding={"114px 0 0 0"}
-          height={"100vh"}
-        >
+    <SectionContainer id='home'>
+      <Container >
+        <FlexWrapper justify="space-between">
           <MainTextContainer>
-            <GreatingSpan>HELLO</GreatingSpan>
-            <MainTitle>I’M GLEB KOSTRUBOV</MainTitle>
-            <AboutText>
+            <Title>Программист разработчик - front-end developer</Title>
+            <Greeting>HELLO</Greeting>
+            <GreetingTitle>I'm Maxim Mityukov</GreetingTitle>
+            <Description>
               I've been doing web design, front-end and back-end development for
               a year now. Do you need a website design, site layout, or maybe a
               turnkey website? Then contact me
-            </AboutText>
+            </Description>
             <ContactButton>CONTACT ME</ContactButton>
           </MainTextContainer>
           <ImageWrapper>
@@ -33,13 +28,18 @@ export const Main = () => {
           </ImageWrapper>
         </FlexWrapper>
       </Container>
-    </StyledMain>
+    </SectionContainer>
   );
 };
 
-const StyledMain = styled.main`
+const SectionContainer = styled.section`
   display: flex;
-  z-index: 999;
+  padding: 114px 0 0;
+  background-color: ${theme.colors.primaryBg};
+`;
+
+const Title = styled.h1`
+  display: none;
 `;
 
 const MainTextContainer = styled.div`
@@ -49,6 +49,7 @@ const MainTextContainer = styled.div`
   max-width: 447px;
   text-align: left;
   margin-bottom: 124px;
+  width: 100%;
 
   @media ${theme.media.mobile} {
     gap: 12px;
@@ -84,28 +85,25 @@ const ImageWrapper = styled.div`
     top: 0;
     left: 0;
     z-index: 1;
-    
   }
 
-  @media ${theme.media.tablet} {
+  ${theme.media.tablet} {
     display: none;
   }
 
-  @media ${theme.media.mobile} {
+  ${theme.media.mobile} {
     display: block;
   }
 `;
 
-const GreatingSpan = styled.span`
+const Greeting = styled.span`
   position: relative;
   width: min-content;
   ${font({ weight: 400, lineHeight: 1.2, Fmax: 48, Fmin: 27 })}
   letter-spacing: 0.05em;
 `;
 
-const MainTitle = styled.h1`
-  font-weight: 700;
-  font-size: 72px;
+const GreetingTitle = styled.span`
   ${font({
     family: "Poppins, sans-serif",
     weight: 600,
@@ -117,7 +115,7 @@ const MainTitle = styled.h1`
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-const AboutText = styled.p`
+const Description = styled.p`
   font-weight: 200;
   font-size: 18px;
 `;
@@ -140,4 +138,3 @@ const Photo = styled.img`
   z-index: 3;
   object-position: bottom;
 `;
-

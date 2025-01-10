@@ -44,6 +44,7 @@ const StyledWrapper = styled.div`
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.47);
 
   h3 {
+    max-width: 200px;
     font-weight: 200;
     font-size: 24px;
     ${font({ weight: 300, lineHeight: 1.2, Fmax: 24, Fmin: 18 })}
@@ -56,7 +57,6 @@ const StyledWrapper = styled.div`
 `;
 
 const IconContainer = styled.div`
-  /* width: 100px; */
   height: 96px;
   display: flex;
   justify-content: center;

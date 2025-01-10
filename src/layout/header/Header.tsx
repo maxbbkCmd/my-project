@@ -9,8 +9,8 @@ import { MobileMenu } from "../../components/nav/MobileMenu";
 export const Header = () => {
   return (
     <StyledHeader>
-      <Container>
-        <FlexWrapper justify={"space-between"} maxWidth={"1100px"} headerJustify={ "start"}>
+      <Container >
+        <FlexWrapper justify="space-between">
           <Logo />
           <Menu />
           <MobileMenu />
@@ -22,11 +22,11 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
   position: fixed;
+  padding: 26px 0;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
-  padding: 26px 0;
   background-color: ${theme.colors.primaryBg};
-  z-index: 99999;
+  z-index: 10;
 `;

@@ -9,41 +9,70 @@ import { LinkTitle } from "../../components/LinkTitle";
 
 export const Footer = () => {
   return (
-    <StyledFooter id='footer'>
-      <Container padding={"50px 15px 50px 15px"}>
-        <FlexWrapper justify='space-evenly' footerWrap={"wrap"} footerJustify={"space-between"} footerGap={'50'}>
+    <SectionContainer id='footer'>
+      <Container>
+        <FlexWrapper justify="space-around">
           <Navigation>
-
-          <FooterLink>
-              <Link href={"#home"} children="Home"></Link>
-              <Link href={"#about"} children="About me"></Link>
-              <Link href={"#portfolio"} children="Portfolio"></Link>
-              <Link href={"#contact"} children="Contact"></Link>
-          </FooterLink>
+            <FooterLink>
+              <Link href={"#home"} children='Home'></Link>
+              <Link href={"#about"} children='About me'></Link>
+              <Link href={"#portfolio"} children='Portfolio'></Link>
+              <Link href={"#contact"} children='Contact'></Link>
+            </FooterLink>
           </Navigation>
           <FooterLink>
-              <LinkTitle title="Contact:"></LinkTitle>
-              <Link href={"mailto:89263113112@mail.ru"} children="Email: 89263113112@mail.ru"></Link>
-              <Link href={"https://t.me/maxMtk"} children="Telegram: @maxMtk" target="_blank"></Link>
-              <Link href={"tel:+79263113112"} children="Calls: +7 (926) 311-31-12"></Link>
+            <LinkTitle title='Contact:'></LinkTitle>
+            <Link
+              href={"mailto:89263113112@mail.ru"}
+              children='Email: 89263113112@mail.ru'
+            ></Link>
+            <Link
+              href={"https://t.me/maxMtk"}
+              children='Telegram: @maxMtk'
+              target='_blank'
+            ></Link>
+            <Link
+              href={"tel:+79263113112"}
+              children='Calls: +7 (926) 311-31-12'
+            ></Link>
           </FooterLink>
           <FooterWrapper>
             <LogoWrapper>
               <Logo />
               <ArrowWrapper>
-                <Icon iconId={"arrowTopIcon"} width={"36"} height={"36"} viewBox={"0 0 36 36"}/>
+                <Icon
+                  iconId={"arrowTopIcon"}
+                  width={"36"}
+                  height={"36"}
+                  viewBox={"0 0 36 36"}
+                />
               </ArrowWrapper>
             </LogoWrapper>
             <FooterSmallCopy>Copyright © 2021, Notitanic</FooterSmallCopy>
           </FooterWrapper>
         </FlexWrapper>
       </Container>
-    </StyledFooter>
+    </SectionContainer>
   );
 };
 
-const StyledFooter = styled.footer`
+const SectionContainer = styled.footer`
+  padding: 50px 0;
   background-color: ${theme.colors.secondaryBg};
+  
+  ${FlexWrapper} {
+    @media ${theme.media.mobile} {
+      flex-direction: row;
+    }
+  }
+
+  ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+
 `;
 
 const Navigation = styled.nav``;
@@ -61,12 +90,21 @@ const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 57px;
-  align-items: start;
+
+  @media ${theme.media.tablet} {
+    width: 100%;
+  }
+
+  @media ${theme.media.mobile} {
+    width: 100%;
+  }
 `;
 
 const FooterSmallCopy = styled.small`
   font-size: 18px;
   font-weight: 200;
+
+
 `;
 
 const LogoWrapper = styled.div`
@@ -74,14 +112,12 @@ const LogoWrapper = styled.div`
   justify-content: space-between;
   gap: 32px;
 
-  @media ${theme.media.mobile} {
-    gap: 105px;
+  @media ${theme.media.tablet} {
+    justify-content: space-around;
   }
 
-  @media screen and (max-width: 365px) {
-    gap: 25px;
-    flex-wrap: wrap;
-    justify-content: center;
+  @media ${theme.media.mobile} {
+    gap: 105px;
   }
 `;
 
