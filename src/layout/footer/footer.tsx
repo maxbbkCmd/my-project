@@ -15,11 +15,7 @@ const navData = [
 
 const contactsData = [
   { url: "mailto:89263113112@mail.ru", children: "Email: 89263113112@mail.ru" },
-  {
-    url: "https://t.me/maxMtk",
-    children: "Telegram: @maxMtk",
-    target: "_blank",
-  },
+  { url: "https://t.me/maxMtk", children: "Telegram: @maxMtk", target: "_blank" },
   { url: "tel:+79263113112", children: "Calls: +7 (926) 311-31-12" },
 ];
 
