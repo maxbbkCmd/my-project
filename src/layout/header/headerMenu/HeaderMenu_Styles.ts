@@ -1,33 +1,21 @@
 import styled, { css } from "styled-components";
-import { Link } from "../Link";
-import { theme } from "../../styles/Theme";
+import { theme } from "../../../styles/Theme";
 
-export const MobileMenu = () => {
-  return (
-    <StyledMobileMenu>
-      <BurgerButton isOpen={true}>
-        <span></span>
-      </BurgerButton>
-      <MobileMenuPopup isOpen={true}>
-        <ul>
-          <Link href='#home'>Home</Link>
-          <Link href='#about'>About me</Link>
-          <Link href='#portfolio'>Portfolio</Link>
-          <Link href='#footer'>Contact</Link>
-        </ul>
-      </MobileMenuPopup>
-    </StyledMobileMenu>
-  );
-};
+//menu
+const MenuItem = styled.ul`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 
-const StyledMobileMenu = styled.nav`
-  display: none;
-
-  @media ${theme.media.tablet} {
-    display: none;
-    // включить попапп
+  @media screen and (max-width: 950px) {
+    margin-left: 25px;
   }
 `;
+
+//mobileMenu
+
+const MobileMenu = styled.nav``;
 
 const BurgerButton = styled.div<{ isOpen: boolean }>`
   position: fixed;
@@ -35,7 +23,7 @@ const BurgerButton = styled.div<{ isOpen: boolean }>`
   height: 36px;
   top: 32px;
   right: 15px;
-  z-index: 9999;
+  z-index: 9999999999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +42,7 @@ const BurgerButton = styled.div<{ isOpen: boolean }>`
     ${(props) =>
       props.isOpen &&
       css<{ isOpen: boolean }>`
-        color: rgba(255, 255, 255, 0);
+        background-color: rgba(255, 255, 255, 0);
       `};
 
     &::before {
@@ -94,12 +82,12 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   right: 0;
   bottom: 0;
   z-index: 99;
-  display: none;
+  display: flex;
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
+      display: none; // вкл\выкл попап
       justify-content: center;
       align-items: center;
     `}
@@ -110,7 +98,25 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    margin-left: 100px;
     gap: 54px;
   }
 `;
+
+//desktopMenu
+
+const DesktopMenu = styled.nav`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 710px;
+`;
+
+//export
+
+export const S = {
+  MenuItem,
+  MobileMenu,
+  BurgerButton,
+  MobileMenuPopup,
+  DesktopMenu,
+};

@@ -1,8 +1,7 @@
-import styled from "styled-components";
 import { Container } from "../../../components/Container";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { IconWrapper } from "../../../components/IconWrapper";
-import { theme } from "../../../styles/Theme";
+import { S } from "./Skill_Styled";
 
 const skillsData = [
   {
@@ -70,9 +69,9 @@ const skillsData = [
   },
 ];
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
-    <SectionContainer>
+    <S.Skills>
       <Container>
         <FlexWrapper justify='center' wrap="wrap" gap="30px">
           {skillsData.map((skill) => (
@@ -80,17 +79,7 @@ export const Skills = () => {
           ))}
         </FlexWrapper>
       </Container>
-    </SectionContainer>
+    </S.Skills>
   );
 };
 
-const SectionContainer = styled.section`
-  padding: 115px 0 115px;
-  background-color: ${theme.colors.secondaryBg};
-  
-  ${FlexWrapper} {
-    @media ${theme.media.mobile} {
-      gap: 25px;  
-    }
-  }
-`;

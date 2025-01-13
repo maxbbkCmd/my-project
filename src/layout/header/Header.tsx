@@ -1,32 +1,33 @@
-import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/nav/Menu";
+import { DesktopMenu } from "./headerMenu/desktopMenu/DesktopMenu";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { theme } from "../../styles/Theme";
-import { MobileMenu } from "../../components/nav/MobileMenu";
+import { MobileMenu } from "./headerMenu/mobileMenu/MobileMenu";
+import { S } from "./Header_Styles";
+import { useEffect, useState } from "react";
 
-export const Header = () => {
+export const Header: React.FC = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 768;
+
+  useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
-    <StyledHeader>
-      <Container >
-        <FlexWrapper justify="space-between">
+    <S.Header>
+      <Container>
+        <FlexWrapper justify='space-between'>
           <Logo />
-          <Menu />
-          <MobileMenu />
+          {width < breakpoint ? <MobileMenu /> : <DesktopMenu />}
         </FlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
-
-const StyledHeader = styled.header`
-  position: fixed;
-  padding: 26px 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  background-color: ${theme.colors.primaryBg};
-  z-index: 10;
-`;
+function effect(): import("react").EffectCallback {
+  throw new Error("Function not implemented.");
+}
