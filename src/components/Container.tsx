@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-type ContainerProps = {
+type ContainerPropsType = {
   maxWidth?: string;
   width?: string;
   minHeight?: string;
@@ -9,10 +9,9 @@ type ContainerProps = {
   border?: string;
   position?: string;
   marginBottom?: string;
-  mobilePadding?: string;
 };
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div<ContainerPropsType>`
   max-width: 1202px;
   width: 100%;
   min-height: 100%;

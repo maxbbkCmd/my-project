@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { theme } from "../../../styles/Theme";
+import { theme } from "../../styles/Theme";
 
 //menu
 const MenuItem = styled.ul`
@@ -95,7 +95,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     align-items: center;
     gap: 54px;

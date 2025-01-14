@@ -66,6 +66,7 @@ const PortfolioSliderWrapper = styled.div`
   max-width: 970px;
   width: 100%;
   gap: 81px;
+  border: 1px solid red;
 
   @media ${theme.media.tablet} {
     gap: 57px;
@@ -77,15 +78,17 @@ const PortfolioSliderWrapper = styled.div`
     padding: 30px 25px;
     flex-wrap: wrap;
   }
+
+  @media screen and (max-width: 600px) {
+    max-width: 343px;
+  }
 `;
 
 const Image = styled.img`
-  object-fit: contain;
-  display: block;
   object-fit: cover;
-  border-radius: 30px;
   width:100%;
-  max-width: 493px;
+  height: 100%;
+  border-radius: 30px;
 
   @media ${theme.media.mobile} {
     max-width: 294px;
@@ -122,13 +125,19 @@ const Title = styled.h3`
 
 const Description = styled.p`
   font-weight: 200;
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 const Link = styled.a`
   font-weight: 200;
   font-size: 18px;
   color: ${theme.colors.elements};
+
+  svg {
+    width: 14px;
+    height: 10px
+  }
+
 `;
 
 const LinkWrapper = styled.div`
@@ -142,6 +151,26 @@ const LinkWrapper = styled.div`
   }
 `;
 
+const SlideWrapper = styled.div`
+  display: flex;
+  gap: 80px;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    gap: 50px;
+  }
+`
+
+const ImgWrapper = styled.div`
+  width: 500px;
+  height: 500px;
+
+  @media screen and (max-width: 600px) {
+    max-width: 294px;
+    max-height: 294px;
+  }
+`
+
 export const S = {
   Portfolio,
   PortfolioTitle,
@@ -154,5 +183,7 @@ export const S = {
   Title,
   Description,
   Link,
-  LinkWrapper
+  LinkWrapper,
+  SlideWrapper,
+  ImgWrapper,
 }

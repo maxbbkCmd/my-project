@@ -92,18 +92,15 @@ const Title = styled.h2`
     padding: 0px;
     position: absolute;
     top: -30px;
-    left: 25px;
   }
 `;
 
 const Description = styled.p`
-  font-weight: 300;
-  font-size: 19px;
+  font-weight: 200;
+  font-size: 20px;
   max-width: 370px;
   text-align: left;
   letter-spacing: 0.01em;
-  font-weight: 200;
-  font-size: 20px;
 
   @media ${theme.media.tablet} {
     max-width: 100%;
@@ -111,7 +108,6 @@ const Description = styled.p`
 
   @media ${theme.media.mobile} {
     margin: 0;
-    max-width: 100%;
   }
 `;
 

@@ -40,23 +40,22 @@ const FooterWrapper = styled.div`
   @media ${theme.media.tablet} {
     width: 100%;
   }
-
-  @media ${theme.media.mobile} {
-    width: 100%;
-  }
 `;
 
 const FooterSmallCopy = styled.small`
   font-size: 18px;
   font-weight: 200;
-
-
 `;
 
 const LogoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 32px;
+
+  svg {
+    width: 181px;
+    height: 48px;
+  }
 
   @media ${theme.media.tablet} {
     justify-content: space-around;
@@ -68,13 +67,13 @@ const LogoWrapper = styled.div`
 `;
 
 const ArrowWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 60px;
   width: 60px;
   background-color: ${theme.colors.elements};
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const S = {

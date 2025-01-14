@@ -9,8 +9,6 @@ export type IconWrapperPropsType = {
   height?: string;
   viewBox?: string;
   text: string;
-  mobileWidth?: string;
-  mobileHeight?: string;
 };
 
 export const IconWrapper = (props: IconWrapperPropsType) => {
@@ -22,8 +20,6 @@ export const IconWrapper = (props: IconWrapperPropsType) => {
           width={props.width}
           height={props.height}
           viewBox={props.viewBox}
-          mobileHeight={props.mobileHeight}
-          mobileWidth={props.mobileWidth}
         />
       </IconContainer>
 

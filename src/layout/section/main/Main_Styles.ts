@@ -18,10 +18,10 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 447px;
   text-align: left;
-  margin-bottom: 124px;
+  max-width: 447px;
   width: 100%;
+  margin-bottom: 124px;
 
   @media ${theme.media.mobile} {
     gap: 12px;

@@ -1,0 +1,55 @@
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  position: absolute;
+  top: 250px;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.alice-carousel__prev-btn {
+  left: -150px;
+  background-image: url("../../assets/images/LeftArrow.png");
+
+  @media screen and (max-width: 850px) {
+    left: 0px;
+    top: 522px;
+  }
+  @media screen and (max-width: 600px) {
+    left: 50px;
+    top: 922px;
+  }
+}
+
+.alice-carousel__next-btn {
+  right: -150px;
+  background-image: url("../../assets/images/RightArrow.png");
+
+  @media screen and (max-width: 850px) {
+    right: 0px;
+    top: 522px;
+  }
+  @media screen and (max-width: 600px) {
+    right: 50px;
+    top: 922px;
+  }
+}
+
+
+.alice-carousel__dots {
+  display: none;
+}
+
+.alice-carousel__next-btn-item, 
+.alice-carousel__prev-btn-item {
+  opacity: 0;
+  width: 60px;
+  height: 60px;;
+}
